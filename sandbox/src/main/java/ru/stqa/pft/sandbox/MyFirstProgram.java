@@ -1,20 +1,13 @@
 package ru.stqa.pft.sandbox;
 
+import org.w3c.dom.css.Rect;
+
 public class MyFirstProgram {
     public static void main(String[] args) {
-        double l = 5;
-        System.out.println("Площадь квадрата со стороной " + l + " равна " + area(l));
+        Square s = new Square(5);
+        System.out.println("Площадь квадрата со стороной " + s.getLength() + " равна " + s.area());
 
-        double a = 3;
-        double b = 7;
-        System.out.println("Площадь прямоугольника со сторонами " + a + " и " + b + " равна " + area(a, b));
-    }
-
-    public static double area(double l) {
-        return l * l;
-    }
-
-    public static double area(double a, double b) {
-        return a * b;
+        Rectangle r = new Rectangle(3, 7);
+        System.out.println("Площадь прямоугольника со сторонами " + r.getLength() + " и " + r.getWidth() + " равна " + r.area());
     }
 }
